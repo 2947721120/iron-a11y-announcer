@@ -9,7 +9,7 @@ Edit this file, and the bot will squash your changes :)
 
 -->
 
-[![Build Status](https://travis-ci.org/PolymerElements/iron-a11y-announcer.svg?branch=master)](https://travis-ci.org/PolymerElements/iron-a11y-announcer)
+[![构建状态](https://travis-ci.org/PolymerElements/iron-a11y-announcer.svg?branch=master)](https://travis-ci.org/PolymerElements/iron-a11y-announcer)
 
 _[Demo and API Docs](https://elements.polymer-project.org/elements/iron-a11y-announcer)_
 
@@ -17,26 +17,21 @@ _[Demo and API Docs](https://elements.polymer-project.org/elements/iron-a11y-ann
 ##&lt;iron-a11y-announcer&gt;
 
 
-`iron-a11y-announcer` is a singleton element that is intended to add a11y
-to features that require on-demand announcement from screen readers. In
-order to make use of the announcer, it is best to request its availability
-in the announcing element.
+`iron-a11y-announcer` 是为了增加A11Y到需要按需宣布从屏幕阅读器功能的单元素。为了充分利用播音员的，最好是在宣布元素要求其可用性。
 
-Example:
+例子:
 
     Polymer({
 
       is: 'x-chatty',
 
       attached: function() {
-        // This will create the singleton element if it has not
-        // been created yet:
+     //这将创建单元素，如果它没有被创建//尚未：
         Polymer.IronA11yAnnouncer.requestAvailability();
       }
     });
 
-After the `iron-a11y-announcer` has been made available, elements can
-make announces by firing bubbling `iron-announce` events.
+之后 `iron-a11y-announcer` 已提供，元件可通过烧制鼓泡使日公布 `iron-announce` events.
 
 Example:
 
